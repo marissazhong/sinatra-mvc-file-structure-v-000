@@ -3,5 +3,6 @@ class Dog
   @@all = []
   def initialize(attributes={})
     attributes.each {|k,v| self.send(("#{k}="),v)}
+    @@all << self
   end
 end
